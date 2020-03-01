@@ -1,0 +1,148 @@
+<!DOCTYPE html> <!-- Not an HTML Tag, but instructions to the browser. Must be the first thing in your HTML document. This version tells the browser you're using HTML5 -->
+<html lang="en"> <!-- Starts the HTML document, contains all other HTML elements. Lang is an attribute which declares the language for a webpage.-->
+    <head><!--Contains scripts, styles, meta information, and the required title element-->
+        <title>WHO Web Workshops</title>
+        <meta charset="utf-8"> <!--Required tag, specifies character encoding for the document-->
+    </head>
+    <body>
+        <header>
+            <h1 id="top">WHO Web Workshops</h1> <!--Signifies the most important piece of information on the page. There should be exactly ONE H1 on a page, no more, no less-->
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#schedule">Workshop Schedule</a></li>
+                <li><a href="#mail">Join the Mailing List</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section>
+                    <img src="images/html-books.jpg" alt="Web Development Books" width="500" height="375"> <!--alt tag is required for SEO and accessibility, width and height not required but best practice--><br>
+                    Photo by <a href="https://unsplash.com/@grakozy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Greg Rakozy</a> on <a href="https://unsplash.com/s/photos/html?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+                <p>Reasons to learn HTML:</p>
+                <ul><!---ul denotes an Unordered List, which is to say, a list in which the order of the items does NOT matter-->
+                    <li>Design impressive emails</li><!--li denotes a single List Item-->
+                    <li>Create your own website</li>
+                    <li>Rebuild MySpace--harder, better, faster, stronger</li>
+                    <li>Build a website showcasing pictures of cute dogs in your neighborhood (Hint: they are all cute)</li>
+                </ul>
+
+                <p>Steps to learning HTML:</p>
+                <ol><!--ol denotes an Order List, which is to say, a list in which the order of the items DOES matter.-->
+                    <li>Learn the difference between tags &amp; elements</li>
+                    <li>Learn to identify an attribute</li>
+                    <li>Learn the difference between classes &amp; IDs</li>
+                    <li>Devote hours of study to semantics</li>
+                </ol>
+            </section>
+
+            <h2 id="schedule">Workshop Schedule</h2>
+            <section>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Workshop Subject</th>
+                            <th>Date &amp; Time</th>
+                            <th>Instructor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>HTML</td>
+                            <td><time datetime="2020-02-21 13:00-05:00">Feb 21, 2020, 1:00 PM</time></td>
+                            <td>Lanie</td>
+                        </tr>
+                        <tr>
+                            <td>CSS</td>
+                            <td><time datetime="2020-02-28 13:00-05:00">Feb 28, 2020, 1:00 PM</time></td>
+                            <td>Lanie</td>
+                        </tr>
+                        <tr>
+                            <td>JavaScript</td>
+                            <td><time datetime="2020-03-06 13:00-05:00">March 6, 2020, 1:00 PM</time></td>
+                            <td>Lanie</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Back to <a href="#top">Top</a></p>
+            </section>
+
+            <h2 id="mail">Join Our Mailing List</h2>
+            <section>
+                <form method="post" action="">
+                    <p><input type="reset" value="Clear Form"></p>
+                    <fieldset>
+                        <legend>Personal Details:</legend>
+                        <p>
+                            <label for="firstname">First Name:</label>
+                            <input type="text" id="firstname" name="firstname" placeholder="Enter your name">
+
+                            <label for="lastname">Last Name:</label>
+                            <input type="text" id="lastname" name="lastname">
+
+                            <label for="age">Age:</label>
+                            <input type="text" id="age" name="age">
+                        </p>
+                        <p>
+                            Gender:<br>
+                            <input type="radio" name="gender" id="woman" value="woman">
+                            <label for="woman">Woman</label>
+
+                            <input type="radio" name="gender" id="man" value="man">
+                            <label for="man">Man</label>
+
+                            <input type="radio" name="gender" id="other" value="other">
+                            <label for="other">Other</label>
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Contact Info:</legend>
+                        <p>
+                            <label for="phone">Phone Number:</label>
+                            <input type="tel" id="phone" name="phone"><br>
+
+                            <label for="email">E-Mail:</label>
+                            <input type="email" id="email" name="email">
+                        </p>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Other</legend>
+                        <p>
+                            <label for="interests">What workshop would you most like to see us put on?</label>
+                            <select name="interests" id="interests">
+                                <option disabled selected>--- Select One ---</option>
+                                <optgroup label="Web">
+                                    <option value="html">HTML</option>
+                                    <option value="css">CSS</option>
+                                    <option value="php">PHP</option>
+                                    <option value="javascript">JavaScript</option>
+                                </optgroup>
+                                <optgroup label="Design">
+                                    <option value="color">Color Theory</option>
+                                    <option value="HCI">Human-Computer Interaction</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                        <p>
+                            How did you hear about WHO Web Workshops? (Check All That Apply):<br>
+                            <input type="checkbox" id="friend" name="friend" value="friend">
+                            <label for="friend">A Friend</label><br>
+
+                            <input type="checkbox" id="discord" name="discord" value="discord">
+                            <label for="discord">The WHO Discord</label><br>
+
+                            <input type="checkbox" id="poster" name="poster" value="poster">
+                            <label for="poster">Poster</label><br>
+                        </p>
+                    </fieldset>
+                    <p>
+                        <input type="submit" value="Join the Mailing List">
+                    </p>
+                </form>
+                <p>Back to <a href="#top">Top</a></p>
+            </section>
+        </main>
+    </body>
+
+</html>
